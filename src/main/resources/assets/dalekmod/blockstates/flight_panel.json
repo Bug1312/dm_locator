@@ -1,0 +1,23 @@
+{
+	"multipart": [
+		{ "when": { "facing": "north" }, "apply": { "model": "dalekmod:block/flight_panel", "y": 0 } },
+		{ "when": { "facing": "south" }, "apply": { "model": "dalekmod:block/flight_panel", "y": 180 } },
+		{ "when": { "facing": "west" }, "apply": { "model": "dalekmod:block/flight_panel", "y": 270 } },
+		{ "when": { "facing": "east" }, "apply": { "model": "dalekmod:block/flight_panel", "y": 90 } },
+
+		{ "when": { "facing": "north", "has_locator": "true" }, "apply": { "model": "dm_locator:block/locator_attachment", "y": 0 } },
+		{ "when": { "facing": "south", "has_locator": "true" }, "apply": { "model": "dm_locator:block/locator_attachment", "y": 180 } },
+		{ "when": { "facing": "west", "has_locator": "true" }, "apply": { "model": "dm_locator:block/locator_attachment", "y": 270 } },
+		{ "when": { "facing": "east", "has_locator": "true" }, "apply": { "model": "dm_locator:block/locator_attachment", "y": 90 } },
+
+		{ "when": { "facing": "north", "has_locator": "true", "cartridge": "1" }, "apply": { "model": "dm_locator:block/locator_attachment_module", "y": 0 } },
+		{ "when": { "facing": "south", "has_locator": "true", "cartridge": "1" }, "apply": { "model": "dm_locator:block/locator_attachment_module", "y": 180 } },
+		{ "when": { "facing": "west", "has_locator": "true", "cartridge": "1" }, "apply": { "model": "dm_locator:block/locator_attachment_module", "y": 270 } },
+		{ "when": { "facing": "east", "has_locator": "true", "cartridge": "1" }, "apply": { "model": "dm_locator:block/locator_attachment_module", "y": 90 } },
+
+		{ "when": { "facing": "north", "has_locator": "true", "cartridge": "2" }, "apply": { "model": "dm_locator:block/locator_attachment_module_gold", "y": 0 } },
+		{ "when": { "facing": "south", "has_locator": "true", "cartridge": "2" }, "apply": { "model": "dm_locator:block/locator_attachment_module_gold", "y": 180 } },
+		{ "when": { "facing": "west", "has_locator": "true", "cartridge": "2" }, "apply": { "model": "dm_locator:block/locator_attachment_module_gold", "y": 270 } },
+		{ "when": { "facing": "east", "has_locator": "true", "cartridge": "2" }, "apply": { "model": "dm_locator:block/locator_attachment_module_gold", "y": 90 } }
+	]
+}

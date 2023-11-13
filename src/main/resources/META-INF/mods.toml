@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[30,)"
+license="LGPL-3.0-only"
+issueTrackerURL="https://github.com/Bug1312/dm_locator/issues"
+[[mods]]
+modId="dm_locator"
+version="1.0.0"
+displayURL="https://github.com/Bug1312/dm_locator"
+displayName="DM Locator Addon"
+credits="Bug1312, ranafangirl"
+authors="Bug1312"
+description='''A Dalek Mod addon that adds in a the ability to locate biomes and structures with a new attachment on the flight panel in Dalek Mod!'''
+
+[[dependencies.dm_locator]]
+    modId="forge"
+    mandatory=true
+    versionRange="[30,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.dm_locator]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.4,1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.dm_locator]]
+    modId="dalekmod"
+    mandatory=true
+    versionRange="[68,)"
+    ordering="BEFORE"
+    side="BOTH"

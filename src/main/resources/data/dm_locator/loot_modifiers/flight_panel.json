@@ -1,0 +1,12 @@
+{
+	"type":"dm_locator:flight_panel",
+	"conditions":[
+		{
+			"condition":"minecraft:block_state_property",
+			"block":"dalekmod:flight_panel",
+			"properties":{
+				"has_locator":"true"
+			}
+		}
+	]
+}

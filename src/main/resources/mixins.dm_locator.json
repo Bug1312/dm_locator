@@ -1,0 +1,9 @@
+{
+	"compatibilityLevel": "JAVA_8",
+	"minVersion": "0.7.10",
+	"package": "com.bug1312.dm_locator.mixins",
+	"refmap": "mixins.dm_locator.refmap.json",
+	"required": true,
+	"mixins": ["FlightPanelBlockMixin","DMFlightCancelWatch", "TriggerWaypointWrite", "IPacketEjectWaypointCartridgeAccessor"],
+	"client": ["OverlayFlightModeMixin","FixDMFlight"]
+}

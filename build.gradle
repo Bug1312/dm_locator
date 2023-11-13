@@ -1,0 +1,94 @@
+buildscript {
+	repositories {
+		maven { url = 'https://maven.minecraftforge.net' }
+		mavenCentral()
+	}
+	dependencies {
+		classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+		classpath 'org.spongepowered:mixingradle:0.7.+'
+	}
+}
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+
+version = "${project.property('version')}"
+group = 'com.bug1312.dm_locator'
+archivesBaseName = 'dm_locator'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(8)
+
+println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
+
+minecraft {
+	mappings channel: 'official', version: '1.16.5'
+
+	runs {
+		client {
+			workingDirectory project.file('run')
+			property 'forge.logging.markers', 'REGISTRIES'
+			property 'forge.logging.console.level', 'debug'
+
+			mods {
+				dm_locator {
+					source sourceSets.main
+				}
+			}
+		}
+	}
+}
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+repositories {
+	maven { url = "https://maven.enginehub.org/repo/" }
+	maven { url = "https://cursemaven.com" }
+}
+
+dependencies {
+	minecraft "net.minecraftforge:forge:1.16.5-36.2.30"
+
+	implementation fg.deobf("curse.maven:the-dalek-mod-59654:4706185") // 68.1.1
+// 	implementation fg.deobf("curse.maven:the-dalek-mod-59654:4258146") // 67
+// 	implementation fg.deobf("curse.maven:the-dalek-mod-59654:3987010") // 65.1.1
+// 	implementation fg.deobf("curse.maven:the-dalek-mod-59654:3974844") // 65.1.0
+// 	implementation fg.deobf("curse.maven:the-dalek-mod-59654:3595382") // 65.0.1
+// 	implementation fg.deobf("curse.maven:the-dalek-mod-59654:3594060") // 65.0.0
+
+	annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+}
+
+mixin {
+	add sourceSets.main, 'mixins.dm_locator.refmap.json'
+	config 'mixins.dm_locator.json'
+}
+
+jar {
+	manifest {
+		attributes([
+			"Specification-Title": "dm_locator",
+			"Specification-Vendor": "bug1312",
+			"Specification-Version": "${version}",
+			"Implementation-Title": project.jar.baseName,
+			"Implementation-Version": project.jar.archiveVersion,
+			"Implementation-Vendor" : "bug1312",
+			"Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+		])
+	}
+}
+
+jar.finalizedBy('reobfJar')
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			artifact jar
+		}
+	}
+	repositories {
+		maven {
+			url "file:///${project.projectDir}/mcmodsrepo"
+		}
+	}
+}
+

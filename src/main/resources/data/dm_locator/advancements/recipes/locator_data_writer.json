@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_resource": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "dalekmod:data_writer"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "dm_locator:locator_data_writer"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_resource",
+			"has_the_recipe"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"dm_locator:locator_data_writer"
+		]
+	}
+}

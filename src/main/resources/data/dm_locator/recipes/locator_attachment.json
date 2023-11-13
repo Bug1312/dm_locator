@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" E ",
+		"RCR",
+		"SSS"
+	],
+	"key": {
+		"E": {
+			"item": "minecraft:ender_eye"
+		},
+		"R": {
+			"item": "minecraft:redstone"
+		},
+		"S": {
+			"item": "minecraft:stone"
+		},
+		"C": {
+			"tag": "forge:circuits/basic"
+		}
+	},
+	"result": {
+		"item": "dm_locator:locator_attachment"
+	}
+}

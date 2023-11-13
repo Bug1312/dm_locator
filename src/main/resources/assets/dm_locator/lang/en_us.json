@@ -1,0 +1,33 @@
+{
+	"item.dm_locator.locator_data_writer": "Locatable Data Writer",
+	"item.dm_locator.locator_data_writer.hover.mode.STRUCTURE": "Mode: Structure",
+	"item.dm_locator.locator_data_writer.hover.mode.BIOME": "Mode: Biome",
+	"item.dm_locator.locator_attachment": "Locator Attachment",
+
+	"tooltip.dm_locator.flight_mode.insufficient_fuel": "Not enough fuel to locate!",
+	"tooltip.dm_locator.flight_mode.invalid_waypoint": "Error with waypoint",
+	"tooltip.dm_locator.flight_mode.invalid_module": "Error with data module",
+	"tooltip.dm_locator.locator_data_writer.invalid_structure": "Error with structure",
+	"tooltip.dm_locator.locator_data_writer.invalid_biome": "Error with biome",
+	"tooltip.dm_locator.locator_data_writer.no_structures": "No structure found",
+	"tooltip.dm_locator.locator_data_writer.no_modules": "No modules available",
+	"tooltip.dm_locator.locator_data_writer.module_written": "This module cannot be written to",
+	"tooltip.dm_locator.locator_data_writer.swap_mode.STRUCTURE": "Swapped to mode: Structure",
+	"tooltip.dm_locator.locator_data_writer.swap_mode.BIOME": "Swapped to mode: Biome",
+	"tooltip.dm_locator.flight_panel.load": "Load Data Module",
+	"tooltip.dm_locator.flight_panel.eject": "Eject Data Module",
+	"overlay.dm_locator.flight_mode.use_button": "Press %s to use locator",
+	"name.dm_locator.structure_module.STRUCTURE": "Structure: %s",
+	"name.dm_locator.structure_module.BIOME": "Biome: %s",
+
+	"dm_locator.keybinds.locate_blast": "Flight Mode Locate",
+
+	"advancements.dm_locator.write_all_module_types.title": "Waypoint Wizard",
+	"advancements.dm_locator.write_all_module_types.description": "Write a Waypoint, Structure, and Biome onto Data Modules",
+
+	"advancements.dm_locator.attach_locator.title": "Pull up the GPS",
+	"advancements.dm_locator.attach_locator.description": "Attach a Locator Attachment to a Flight Panel",
+
+	"advancements.dm_locator.use_locator.title": "Turn Left in 400 Feet",
+	"advancements.dm_locator.use_locator.description": "Activate the Locator in flight"
+}

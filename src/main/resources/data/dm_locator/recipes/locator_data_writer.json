@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"T",
+		"D",
+		"I"
+	],
+	"key": {
+		"T": {
+			"item": "minecraft:redstone_torch"
+		},
+		"D": {
+			"item": "dalekmod:data_writer"
+		},
+		"I": {
+			"item": "minecraft:iron_ingot"
+		}
+	},
+	"result": {
+		"item": "dm_locator:locator_data_writer"
+	}
+}

@@ -1,0 +1,1 @@
+{"parent":"dm_locator:item/locator_data_writer_structure","overrides":[{"predicate":{"dm_locator:writer_mode":1},"model":"dm_locator:item/locator_data_writer_biome"}]}

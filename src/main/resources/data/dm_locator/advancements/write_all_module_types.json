@@ -1,0 +1,52 @@
+{
+	"parent": "dalekmod:obtain_circuit",
+	"display": {
+		"icon": {
+			"item": "dalekmod:data_module"
+		},
+		"title": {
+			"translate": "advancements.dm_locator.write_all_module_types.title"
+		},
+		"description": {
+			"translate": "advancements.dalekmod.obtain_data_plastic.description"
+		},
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"write_waypoint": {
+			"trigger": "dm_locator:write_module",
+			"conditions": {
+				"type":"waypoint"
+			}
+		},
+		"write_structure": {
+			"trigger": "dm_locator:write_module",
+			"conditions": {
+				"type":"structure"
+			}
+		},
+		"write_biome": {
+			"trigger": "dm_locator:write_module",
+			"conditions": {
+				"type":"biome"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"write_waypoint"
+		],
+		[
+			"write_structure"
+		],
+		[
+			"write_biome"
+		]
+	],
+	"rewards": {
+		"experience": 50
+	}
+}

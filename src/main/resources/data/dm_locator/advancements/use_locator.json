@@ -1,0 +1,28 @@
+{
+	"parent": "dm_locator:attach_locator",
+	"display": {
+		"icon": {
+			"item": "dm_locator:locator_attachment"
+		},
+		"title": {
+			"translate": "advancements.dm_locator.use_locator.title"
+		},
+		"description": {
+			"translate": "advancements.dm_locator.use_locator.description"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"use_locator": {
+			"trigger": "dm_locator:use_locator"
+		}
+	},
+	"requirements": [
+		[
+			"use_locator"
+		]
+	]
+}

@@ -1,0 +1,38 @@
+{
+	"parent": "dalekmod:obtain_circuit",
+	"display": {
+		"icon": {
+			"item": "dm_locator:locator_attachment"
+		},
+		"title": {
+			"translate": "advancements.dm_locator.attach_locator.title"
+		},
+		"description": {
+			"translate": "advancements.dm_locator.attach_locator.description"
+		},
+		"frame": "goal",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"attach_locator": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"item": {
+					"item": "dm_locator:locator_attachment"
+				},
+				"location": {
+					"block": {
+						"block": "dalekmod:flight_panel"
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"attach_locator"
+		]
+	]
+}
